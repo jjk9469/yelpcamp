@@ -53,7 +53,7 @@ const store = new MongoDBStore({
     url: dbUrl,
     secret,
     touchAfter: 24 * 60 * 60
-})
+});
 
 store.on("error", function(e){
     console.log("SESSION STORE ERROR", e)
@@ -115,7 +115,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/douqbebwk/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://res.cloudinary.com/dgqcj8gub/",
                 "https://images.unsplash.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
@@ -161,7 +161,7 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log('Serving on port ${port}')
+    console.log(`Serving on port ${port}`)
 })
 
 
